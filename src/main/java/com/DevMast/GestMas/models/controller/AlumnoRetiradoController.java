@@ -38,7 +38,7 @@ public class AlumnoRetiradoController {
 		return retirado;
 	}
 	
-	@RequestMapping(value="/alumnoretirado/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/alumnoretirado/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id")Long id) {
 		alumnoretiradoService.delete(id);
 	}

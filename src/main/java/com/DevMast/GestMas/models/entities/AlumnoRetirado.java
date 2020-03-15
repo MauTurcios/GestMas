@@ -13,7 +13,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
  
 @Entity
-@Table(name="AlumnoRetirado")
+@Table(name="alumnoretirado")
 
 public class AlumnoRetirado implements Serializable{
 	

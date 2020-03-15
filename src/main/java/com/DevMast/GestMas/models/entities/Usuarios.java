@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name="Usuarios")
+@Table(name="usuarios")
 
 public class Usuarios implements Serializable{
 	

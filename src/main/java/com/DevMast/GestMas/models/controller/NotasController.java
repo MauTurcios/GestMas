@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.controller;
 
-import java.util.List;
+import java.util.List; 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +39,7 @@ public class NotasController {
 		return nota;
 	}
 	
-	@RequestMapping (value="/notas/{id}", method = RequestMethod.GET)
+	@RequestMapping (value="/notas/{id}", method = RequestMethod.DELETE)
 	public void delete (@PathVariable("id") Long id) {
 		notasService.delete(id);
 	}

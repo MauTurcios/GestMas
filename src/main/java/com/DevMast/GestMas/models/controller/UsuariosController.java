@@ -37,7 +37,7 @@ public class UsuariosController {
 		return usuario;
 	}
 	
-	@RequestMapping (value="/usuarios/{id}", method = RequestMethod.GET)
+	@RequestMapping (value="/usuarios/{id}", method = RequestMethod.DELETE)
 	public void delete (@PathVariable("id") Long id) {
 		usuariosService.delete(id);
 	}

@@ -3,14 +3,17 @@ package com.DevMast.GestMas.models.entities;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name="Notas")
+@Table(name="notas")
 
 public class Notas implements Serializable{
 	
@@ -75,5 +78,9 @@ public class Notas implements Serializable{
 	@Column(name="NF")
 	@NotEmpty
 	private int notaFinal;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id", nullable=false)
+	private Alumnos alumnos;
 	
 }
