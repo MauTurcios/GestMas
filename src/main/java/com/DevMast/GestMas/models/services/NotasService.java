@@ -11,4 +11,6 @@ public interface NotasService {
 	public Notas save (Notas entity);
 	
 	public Optional<Notas> findById(Long id);
+
+	public void delete(Long id);
 }
