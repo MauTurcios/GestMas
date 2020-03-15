@@ -80,7 +80,7 @@ public class Notas implements Serializable{
 	private int notaFinal;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id", nullable=false)
+	@JoinColumn(name = "id", nullable=false, insertable = false, updatable = false)
 	private Alumnos alumnos;
 	
 }

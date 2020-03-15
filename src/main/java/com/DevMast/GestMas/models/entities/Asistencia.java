@@ -39,6 +39,6 @@ public class Asistencia implements Serializable{
 
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id", nullable=false)
+	@JoinColumn(name = "id", nullable=false, insertable = false, updatable = false)
 	private Alumnos alumnos;
 }
