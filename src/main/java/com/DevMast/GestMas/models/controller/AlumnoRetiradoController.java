@@ -12,7 +12,7 @@ import com.DevMast.GestMas.models.entities.AlumnoRetirado;
 import com.DevMast.GestMas.models.services.AlumnoRetiradoService;
 
 @RestController
-@RequestMapping("alumnoretirado")
+@RequestMapping("alumnosretirado")
 public class AlumnoRetiradoController {
 	
 	@Autowired
