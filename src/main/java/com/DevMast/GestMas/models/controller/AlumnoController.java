@@ -21,25 +21,25 @@ public class AlumnoController {
 	
 	
 	
-	@RequestMapping(value="/alumno", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<Alumnos> obtenerAlumnos(){
 		List<Alumnos> alumnos = alumnoService.findAll();
 		return alumnos;
 	}
 	
-	@RequestMapping(value="/alumno/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public Alumnos obtenerById(@PathVariable("id") Long id) {
 		Optional<Alumnos> alumnosById = alumnoService.findById(id);
 		return alumnosById.get();
 	}
 	
-	@RequestMapping(value="/alumno", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public Alumnos guardar(@RequestBody Alumnos alumnos) {
 		Alumnos matriculado = alumnoService.save(alumnos);
 		return matriculado;
 	}
 	
-	@RequestMapping(value="/alumno/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id")Long id) {
 		alumnoService.delete(id);
 	}

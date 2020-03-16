@@ -12,32 +12,32 @@ import com.DevMast.GestMas.models.entities.Usuarios;
 import com.DevMast.GestMas.models.services.UsuariosService;
 
 @RestController
-@RequestMapping ("Usuarios")
+@RequestMapping ("usuarios")
 
 public class UsuariosController {
 	
 	@Autowired
 	private UsuariosService usuariosService;
 	
-	@RequestMapping(value="/usuarios", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<Usuarios> obtenerUsuarios(){
 		List<Usuarios> usuarios = usuariosService.findAll();
 		return usuarios;
 	}
 	
-	@RequestMapping (value="/usuarios/{id}", method =RequestMethod.GET)
+	@RequestMapping (value="/{id}", method =RequestMethod.GET)
 	public Optional<Usuarios> obtenerById(@PathVariable("id")Long id) {
 		Optional<Usuarios> usuariosById = usuariosService.findById(id);
 		return usuariosById;
 	}
 	
-	@RequestMapping(value="/usuarios", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public Usuarios guardar(@RequestBody Usuarios usuarios) {
 		Usuarios usuario = usuariosService.save(usuarios);
 		return usuario;
 	}
 	
-	@RequestMapping (value="/usuarios/{id}", method = RequestMethod.DELETE)
+	@RequestMapping (value="/{id}", method = RequestMethod.DELETE)
 	public void delete (@PathVariable("id") Long id) {
 		usuariosService.delete(id);
 	}

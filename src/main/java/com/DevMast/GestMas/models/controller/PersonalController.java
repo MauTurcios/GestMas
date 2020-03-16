@@ -19,25 +19,25 @@ public class PersonalController {
 	@Autowired
 	private PersonalService personalService;
 	
-	@RequestMapping(value="/personal", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<Personal> obtenerPersonal(){
 		List<Personal> personal = personalService.findAll();
 		return personal;
 	}
 	
-	@RequestMapping(value="/personal/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public Optional<Personal> obtenerById(@PathVariable("id")Long id) {
 		Optional<Personal> personalById = personalService.findById(id);
 		return personalById;
 	}
 	
-	@RequestMapping(value="/personal", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public Personal guardar(@RequestBody Personal personal) {
 		Personal doc = personalService.save(personal);
 		return doc;
 	}
 	
-	@RequestMapping(value="/personal/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id") Long id) {
 		personalService.delete(id);
 	}

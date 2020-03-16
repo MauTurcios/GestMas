@@ -20,25 +20,25 @@ public class AlumnoRetiradoController {
 	
 	
 	
-	@RequestMapping(value="/alumnoretirado", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<AlumnoRetirado> obtenerAlumnos(){
 		List<AlumnoRetirado> alumnoretirado = alumnoretiradoService.findAll();
 		return alumnoretirado;
 	}
 	
-	@RequestMapping(value="/alumnoretirado/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public AlumnoRetirado obtenerById(@PathVariable("id") Long id) {
 		Optional<AlumnoRetirado> alumnosById = alumnoretiradoService.findById(id);
 		return alumnosById.get();
 	}
 	
-	@RequestMapping(value="/alumnoretirado", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public AlumnoRetirado guardar(@RequestBody AlumnoRetirado alumnoretirado) {
 		AlumnoRetirado retirado = alumnoretiradoService.save(alumnoretirado);
 		return retirado;
 	}
 	
-	@RequestMapping(value="/alumnoretirado/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id")Long id) {
 		alumnoretiradoService.delete(id);
 	}

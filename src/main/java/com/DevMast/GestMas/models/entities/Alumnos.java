@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="alumnos")
@@ -24,73 +23,211 @@ public class Alumnos implements Serializable{
 	private Long id;
 	
 	@Column(name="Primer_nombre")
-	@NotEmpty
 	private String alumno1Nombre;
 	
 	@Column(name="Segundo_nombre")
-	@NotEmpty
 	private String alumno2Nombre;
 	
 	@Column(name="alumnoSegundoAp")
-	@NotEmpty
 	private String alumno1Apellido;
 	
 	@Column(name="Segundo_apellido")
-	@NotEmpty
 	private String alumno2Apellido;
 	
 	@Column(name="NIE")
-	@NotEmpty
 	private int NIE;
 	
 	@Column(name="Edad")
-	@NotEmpty
 	private int Edad;
 	
 	@Column(name="Genero")
-	@NotEmpty
 	private String Genero;
 	
 	@Column(name="Nacionalidad")
-	@NotEmpty
 	private String Nacionalidad;
 	
 	@Temporal(TemporalType.DATE)
 	private Date fechaDeNacimiento;
 	
 	@Column(name="Lugar_Nacimiento")
-	@NotEmpty
 	private String lugarDeNacimiento;
 	
 	@Column(name="Direccion")
-	@NotEmpty
 	private String Direccion;
 	
 	@Column(name="Municipio")
-	@NotEmpty
 	private String Municipio;
 	
 	@Column(name="Departamento")
-	@NotEmpty
 	private String Departamento;
 	
 	@Column(name="Nom_Responsable")
-	@NotEmpty
 	private String nombreDelResponsable;
 	
 	@Column(name="Tel_Responsable")
-	@NotEmpty
 	private String telefonoDelResponsable;
 	
 	@Column(name="Inst_Procedencia")
-	@NotEmpty
 	private String institucionDeProcedencia;
 	
 	@Column(name="Grado")
-	@NotEmpty
 	private String Grado;
 	
 	@Column(name="Seccion")
-	@NotEmpty
 	private String Seccion;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getAlumno1Nombre() {
+		return alumno1Nombre;
+	}
+
+	public void setAlumno1Nombre(String alumno1Nombre) {
+		this.alumno1Nombre = alumno1Nombre;
+	}
+
+	public String getAlumno2Nombre() {
+		return alumno2Nombre;
+	}
+
+	public void setAlumno2Nombre(String alumno2Nombre) {
+		this.alumno2Nombre = alumno2Nombre;
+	}
+
+	public String getAlumno1Apellido() {
+		return alumno1Apellido;
+	}
+
+	public void setAlumno1Apellido(String alumno1Apellido) {
+		this.alumno1Apellido = alumno1Apellido;
+	}
+
+	public String getAlumno2Apellido() {
+		return alumno2Apellido;
+	}
+
+	public void setAlumno2Apellido(String alumno2Apellido) {
+		this.alumno2Apellido = alumno2Apellido;
+	}
+
+	public int getNIE() {
+		return NIE;
+	}
+
+	public void setNIE(int nIE) {
+		NIE = nIE;
+	}
+
+	public int getEdad() {
+		return Edad;
+	}
+
+	public void setEdad(int edad) {
+		Edad = edad;
+	}
+
+	public String getGenero() {
+		return Genero;
+	}
+
+	public void setGenero(String genero) {
+		Genero = genero;
+	}
+
+	public String getNacionalidad() {
+		return Nacionalidad;
+	}
+
+	public void setNacionalidad(String nacionalidad) {
+		Nacionalidad = nacionalidad;
+	}
+
+	public Date getFechaDeNacimiento() {
+		return fechaDeNacimiento;
+	}
+
+	public void setFechaDeNacimiento(Date fechaDeNacimiento) {
+		this.fechaDeNacimiento = fechaDeNacimiento;
+	}
+
+	public String getLugarDeNacimiento() {
+		return lugarDeNacimiento;
+	}
+
+	public void setLugarDeNacimiento(String lugarDeNacimiento) {
+		this.lugarDeNacimiento = lugarDeNacimiento;
+	}
+
+	public String getDireccion() {
+		return Direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		Direccion = direccion;
+	}
+
+	public String getMunicipio() {
+		return Municipio;
+	}
+
+	public void setMunicipio(String municipio) {
+		Municipio = municipio;
+	}
+
+	public String getDepartamento() {
+		return Departamento;
+	}
+
+	public void setDepartamento(String departamento) {
+		Departamento = departamento;
+	}
+
+	public String getNombreDelResponsable() {
+		return nombreDelResponsable;
+	}
+
+	public void setNombreDelResponsable(String nombreDelResponsable) {
+		this.nombreDelResponsable = nombreDelResponsable;
+	}
+
+	public String getTelefonoDelResponsable() {
+		return telefonoDelResponsable;
+	}
+
+	public void setTelefonoDelResponsable(String telefonoDelResponsable) {
+		this.telefonoDelResponsable = telefonoDelResponsable;
+	}
+
+	public String getInstitucionDeProcedencia() {
+		return institucionDeProcedencia;
+	}
+
+	public void setInstitucionDeProcedencia(String institucionDeProcedencia) {
+		this.institucionDeProcedencia = institucionDeProcedencia;
+	}
+
+	public String getGrado() {
+		return Grado;
+	}
+
+	public void setGrado(String grado) {
+		Grado = grado;
+	}
+
+	public String getSeccion() {
+		return Seccion;
+	}
+
+	public void setSeccion(String seccion) {
+		Seccion = seccion;
+	}
+	
+	
+	
 }

@@ -14,32 +14,32 @@ import com.DevMast.GestMas.models.services.NotasService;
 
 
 @RestController
-@RequestMapping ("Notas")
+@RequestMapping ("notas")
 
 public class NotasController {
 	
 	@Autowired
 	private NotasService notasService;
 	
-	@RequestMapping(value="/notas", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<Notas> obtenerNotas(){
 		List<Notas> notas = notasService.findAll();
 		return notas;
 	}
 	
-	@RequestMapping (value="/notas/{id}", method =RequestMethod.GET)
+	@RequestMapping (value="/{id}", method =RequestMethod.GET)
 	public Optional<Notas> obtenerById(@PathVariable("id")Long id) {
 		Optional<Notas> notasById = notasService.findById(id);
 		return notasById;
 	}
 	
-	@RequestMapping(value="/notas", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public Notas guardar(@RequestBody Notas notas) {
 		Notas nota = notasService.save(notas);
 		return nota;
 	}
 	
-	@RequestMapping (value="/notas/{id}", method = RequestMethod.DELETE)
+	@RequestMapping (value="/{id}", method = RequestMethod.DELETE)
 	public void delete (@PathVariable("id") Long id) {
 		notasService.delete(id);
 	}

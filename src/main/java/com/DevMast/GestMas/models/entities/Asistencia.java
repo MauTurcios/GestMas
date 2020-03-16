@@ -1,19 +1,15 @@
 package com.DevMast.GestMas.models.entities;
 
-import java.io.Serializable; 
+import java.io.Serializable;  
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="asistencia")
@@ -27,18 +23,54 @@ public class Asistencia implements Serializable{
 	private Long id;
 	
 	@Column(name="NIE")
-	@NotEmpty
 	private int NIE;
 	
 	@Temporal(TemporalType.DATE)
 	private Date Fecha;
 	
 	@Column(name="Estado")
-	@NotEmpty
-	private String estadoDeAsistencia;
-
+	private String Estado;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id", nullable=false, insertable = false, updatable = false)
-	private Alumnos alumnos;
+	
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public int getNIE() {
+		return NIE;
+	}
+
+
+	public void setNIE(int nIE) {
+		NIE = nIE;
+	}
+
+
+	public Date getFecha() {
+		return Fecha;
+	}
+
+
+	public void setFecha(Date fecha) {
+		Fecha = fecha;
+	}
+
+
+	public String getEstado() {
+		return Estado;
+	}
+
+
+	public void setEstado(String estado) {
+		Estado = estado;
+	}
+
 }
