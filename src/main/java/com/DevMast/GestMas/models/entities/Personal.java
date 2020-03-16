@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.entities;
 
-import java.io.Serializable; 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,75 +10,76 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-@Entity
-@Table(name="personal")
 
-public class Personal implements Serializable{
-	
+@Entity
+@Table(name = "personal")
+
+public class Personal implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name="Primer_nombre")
+
+	@Column(name = "Primer_nombre")
 	private String docente1Nombre;
-	
-	@Column(name="Segundo_nombre")
+
+	@Column(name = "Segundo_nombre")
 	private String docente2Nombre;
-	
-	@Column(name="Primer_apellido")
+
+	@Column(name = "Primer_apellido")
 	private String docente1Apellido;
-	
-	@Column(name="Segundo_apellido")
+
+	@Column(name = "Segundo_apellido")
 	private String docente2Apellido;
-	
-	@Column(name="Genero")
+
+	@Column(name = "Genero")
 	private String docenteGenero;
-	
-	@Column(name="DUI")
+
+	@Column(name = "DUI")
 	private String docenteDui;
-	
-	@Column(name="NIT")
+
+	@Column(name = "NIT")
 	private String docenteNit;
-	
-	@Column(name="NIP")
+
+	@Column(name = "NIP")
 	private String docenteNip;
-	
-	@Column(name="Nacionalidad")
-	private String docenteNacionalidad;	
-	
+
+	@Column(name = "Nacionalidad")
+	private String docenteNacionalidad;
+
 	@Temporal(TemporalType.DATE)
-	private Date docenteFechaNacimiento;
-	
-	@Column(name="Lugar_Nacimiento")
+	private Date Fecha_Nacimiento;
+
+	@Column(name = "Lugar_Nacimiento")
 	private String docenteLugarNacimiento;
-	
-	@Column(name="Est_civil")
+
+	@Column(name = "Est_civil")
 	private String docenteEstadoCivil;
-	
-	@Column(name="Telefono")
+
+	@Column(name = "Telefono")
 	private int docenteTelefono;
-	
-	@Column(name="Direccion")
+
+	@Column(name = "Direccion")
 	private String docenteDireccion;
-	
-	@Column(name="Municipio")
+
+	@Column(name = "Municipio")
 	private String docenteMunicipio;
-	
-	@Column(name="Departamento")
+
+	@Column(name = "Departamento")
 	private String docenteDepartamento;
-	
-	@Column(name="Email")
+
+	@Column(name = "Email")
 	private String docenteEmail;
-	
-	@Column(name="Especialidad")
+
+	@Column(name = "Especialidad")
 	private String docenteEspecialidad;
-	
-	@Column(name="Cargo")
+
+	@Column(name = "Cargo")
 	private String docenteCargo;
-	
-	@Column(name="Grado")
+
+	@Column(name = "Grado")
 	private String docenteGrado;
 
 	public Long getId() {
@@ -162,11 +163,11 @@ public class Personal implements Serializable{
 	}
 
 	public Date getDocenteFechaNacimiento() {
-		return docenteFechaNacimiento;
+		return Fecha_Nacimiento;
 	}
 
 	public void setDocenteFechaNacimiento(Date docenteFechaNacimiento) {
-		this.docenteFechaNacimiento = docenteFechaNacimiento;
+		this.Fecha_Nacimiento = docenteFechaNacimiento;
 	}
 
 	public String getDocenteLugarNacimiento() {
@@ -248,7 +249,5 @@ public class Personal implements Serializable{
 	public void setDocenteGrado(String docenteGrado) {
 		this.docenteGrado = docenteGrado;
 	}
-	
-	
-	
+
 }

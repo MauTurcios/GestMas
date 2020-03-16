@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.services;
 
-import java.util.List; 
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,18 +9,18 @@ import com.DevMast.GestMas.models.repository.alumnosRepository;
 
 @Service
 public class AlumnoServicelmpl implements AlumnoService {
-	
+
 	@Autowired
 	public alumnosRepository repository;
 
 	@Override
 	public List<Alumnos> findAll() {
-		return (List<Alumnos>)repository.findAll();
+		return (List<Alumnos>) repository.findAll();
 	}
 
 	@Override
 	public Alumnos save(Alumnos entity) {
-		return  repository.save(entity);
+		return repository.save(entity);
 	}
 
 	@Override
@@ -32,6 +32,5 @@ public class AlumnoServicelmpl implements AlumnoService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
-	
 
 }

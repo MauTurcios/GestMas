@@ -13,33 +13,33 @@ import com.DevMast.GestMas.models.entities.Personal;
 import com.DevMast.GestMas.models.services.PersonalService;
 
 @RestController
-@RequestMapping ("personaldoc")
+@RequestMapping("personaldoc")
 public class PersonalController {
-	
+
 	@Autowired
 	private PersonalService personalService;
-	
-	@RequestMapping(value="", method = RequestMethod.GET)
-	public List<Personal> obtenerPersonal(){
+
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public List<Personal> obtenerPersonal() {
 		List<Personal> personal = personalService.findAll();
 		return personal;
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.GET)
-	public Optional<Personal> obtenerById(@PathVariable("id")Long id) {
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public Optional<Personal> obtenerById(@PathVariable("id") Long id) {
 		Optional<Personal> personalById = personalService.findById(id);
 		return personalById;
 	}
-	
-	@RequestMapping(value="", method = RequestMethod.POST)
+
+	@RequestMapping(value = "", method = RequestMethod.POST)
 	public Personal guardar(@RequestBody Personal personal) {
 		Personal doc = personalService.save(personal);
 		return doc;
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id") Long id) {
 		personalService.delete(id);
 	}
-	
+
 }

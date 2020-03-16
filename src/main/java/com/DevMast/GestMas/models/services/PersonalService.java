@@ -5,12 +5,12 @@ import java.util.Optional;
 import com.DevMast.GestMas.models.entities.Personal;
 
 public interface PersonalService {
-	
+
 	public List<Personal> findAll();
-	
-	public Personal save (Personal entity);
-	
+
+	public Personal save(Personal entity);
+
 	public Optional<Personal> findById(Long id);
-	
-	public void delete (Long id);
+
+	public void delete(Long id);
 }

@@ -5,8 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.DevMast.GestMas.models.entities.AlumnoRetirado;
 
-
 @Repository
-public interface alumnoretiradoRepository extends CrudRepository<AlumnoRetirado, Long>{
-	
+public interface alumnoretiradoRepository extends CrudRepository<AlumnoRetirado, Long> {
+
 }

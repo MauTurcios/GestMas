@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.entities;
 
-import java.io.Serializable; 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,20 +9,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name = "usuarios")
 
-public class Usuarios implements Serializable{
-	
+public class Usuarios implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name="User")
+
+	@Column(name = "User")
 	private String User;
-	
-	@Column(name="Password")
+
+	@Column(name = "Password")
 	private String Password;
 
 	public Long getId() {
@@ -48,7 +48,5 @@ public class Usuarios implements Serializable{
 	public void setPassword(String password) {
 		Password = password;
 	}
-	
-	
-	
+
 }

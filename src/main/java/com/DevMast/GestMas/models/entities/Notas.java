@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.entities;
 
-import java.io.Serializable; 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,56 +12,56 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="notas")
+@Table(name = "notas")
 
-public class Notas implements Serializable{
-	
+public class Notas implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name="NIE")
+
+	@Column(name = "NIE")
 	private int NIE;
-	
-	@Column(name="N1P1")
+
+	@Column(name = "N1P1")
 	private int nota1Periodo1;
-	
-	@Column(name="N2P1")
+
+	@Column(name = "N2P1")
 	private int nota2Periodo1;
-	
-	@Column(name="N3P1")
+
+	@Column(name = "N3P1")
 	private int nota3Periodo1;
-	
-	@Column(name="NF1")
+
+	@Column(name = "NF1")
 	private int notaFinal1;
-	
-	@Column(name="N1P2")
+
+	@Column(name = "N1P2")
 	private int nota1Periodo2;
-	
-	@Column(name="N2P2")
+
+	@Column(name = "N2P2")
 	private int nota2Periodo2;
-	
-	@Column(name="N3P2")
+
+	@Column(name = "N3P2")
 	private int nota3Periodo2;
-	
-	@Column(name="NF2")
+
+	@Column(name = "NF2")
 	private int notaFinal2;
-	
-	@Column(name="N1P3")
+
+	@Column(name = "N1P3")
 	private int nota1Periodo3;
-	
-	@Column(name="N2P3")
+
+	@Column(name = "N2P3")
 	private int nota2Periodo3;
-	
-	@Column(name="N3P3")
+
+	@Column(name = "N3P3")
 	private int nota3Periodo3;
-	
-	@Column(name="NF3")
+
+	@Column(name = "NF3")
 	private int notaFinal3;
-	
-	@Column(name="NF")
+
+	@Column(name = "NF")
 	private int notaFinal;
 
 	public Long getId() {
@@ -184,7 +184,4 @@ public class Notas implements Serializable{
 		this.notaFinal = notaFinal;
 	}
 
-	
-	
-	
 }

@@ -6,5 +6,5 @@ import com.DevMast.GestMas.models.entities.Asistencia;
 
 @Repository
 public interface asistenciaRepository extends CrudRepository<Asistencia, Long> {
-	
+
 }

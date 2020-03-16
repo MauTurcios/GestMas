@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.controller;
 
-import java.util.List; 
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,32 +15,30 @@ import com.DevMast.GestMas.models.services.AlumnoService;
 @RestController
 @RequestMapping("alumnos")
 public class AlumnoController {
-	
+
 	@Autowired
 	private AlumnoService alumnoService;
-	
-	
-	
-	@RequestMapping(value="", method = RequestMethod.GET)
-	public List<Alumnos> obtenerAlumnos(){
+
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public List<Alumnos> obtenerAlumnos() {
 		List<Alumnos> alumnos = alumnoService.findAll();
 		return alumnos;
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Alumnos obtenerById(@PathVariable("id") Long id) {
 		Optional<Alumnos> alumnosById = alumnoService.findById(id);
 		return alumnosById.get();
 	}
-	
-	@RequestMapping(value="", method = RequestMethod.POST)
+
+	@RequestMapping(value = "", method = RequestMethod.POST)
 	public Alumnos guardar(@RequestBody Alumnos alumnos) {
 		Alumnos matriculado = alumnoService.save(alumnos);
 		return matriculado;
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable("id")Long id) {
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public void delete(@PathVariable("id") Long id) {
 		alumnoService.delete(id);
 	}
 

@@ -1,6 +1,6 @@
 package com.DevMast.GestMas.models.entities;
 
-import java.io.Serializable; 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,70 +10,70 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
- 
-@Entity
-@Table(name="alumnoretirado")
 
-public class AlumnoRetirado implements Serializable{
-	
+@Entity
+@Table(name = "alumnoretirado")
+
+public class AlumnoRetirado implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name="Primer_nombre")
+
+	@Column(name = "Primer_nombre")
 	private String alumno1Nombre;
-	
-	@Column(name="Segundo_nombre")
+
+	@Column(name = "Segundo_nombre")
 	private String alumno2Nombre;
-	
-	@Column(name="alumnoSegundoAp")
+
+	@Column(name = "Primer_apellido")
 	private String alumno1Apellido;
-	
-	@Column(name="Segundo_apellido")
+
+	@Column(name = "Segundo_apellido")
 	private String alumno2Apellido;
-	
-	@Column(name="NIE")
+
+	@Column(name = "NIE")
 	private int NIE;
-	
-	@Column(name="Edad")
+
+	@Column(name = "Edad")
 	private int Edad;
-	
-	@Column(name="Genero")
+
+	@Column(name = "Genero")
 	private String Genero;
-	
-	@Column(name="Nacionalidad")
+
+	@Column(name = "Nacionalidad")
 	private String Nacionalidad;
-	
+
 	@Temporal(TemporalType.DATE)
-	private Date fechaDeNacimiento;
-	
-	@Column(name="Lugar_Nacimiento")
+	private Date Fecha_Nacimiento;
+
+	@Column(name = "Lugar_Nacimiento")
 	private String lugarDeNacimiento;
-	
-	@Column(name="Direccion")
+
+	@Column(name = "Direccion")
 	private String Direccion;
-	
-	@Column(name="Municipio")
+
+	@Column(name = "Municipio")
 	private String Municipio;
-	
-	@Column(name="Departamento")
+
+	@Column(name = "Departamento")
 	private String Departamento;
-	
-	@Column(name="Nom_Responsable")
+
+	@Column(name = "Nom_Responsable")
 	private String nombreDelResponsable;
-	
-	@Column(name="Tel_Responsable")
+
+	@Column(name = "Tel_Responsable")
 	private String telefonoDelResponsable;
-	
-	@Column(name="Inst_Procedencia")
+
+	@Column(name = "Inst_Procedencia")
 	private String institucionDeProcedencia;
-	
-	@Column(name="Grado")
+
+	@Column(name = "Grado")
 	private String Grado;
-	
-	@Column(name="Seccion")
+
+	@Column(name = "Seccion")
 	private String Seccion;
 
 	public Long getId() {
@@ -149,11 +149,11 @@ public class AlumnoRetirado implements Serializable{
 	}
 
 	public Date getFechaDeNacimiento() {
-		return fechaDeNacimiento;
+		return Fecha_Nacimiento;
 	}
 
 	public void setFechaDeNacimiento(Date fechaDeNacimiento) {
-		this.fechaDeNacimiento = fechaDeNacimiento;
+		this.Fecha_Nacimiento = fechaDeNacimiento;
 	}
 
 	public String getLugarDeNacimiento() {
@@ -227,7 +227,5 @@ public class AlumnoRetirado implements Serializable{
 	public void setSeccion(String seccion) {
 		Seccion = seccion;
 	}
-	
-	
-	
+
 }
