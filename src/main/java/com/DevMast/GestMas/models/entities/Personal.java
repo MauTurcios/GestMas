@@ -80,7 +80,7 @@ public class Personal implements Serializable {
 	private String docenteCargo;
 
 	@Column(name = "Grado")
-	private String docenteGrado;
+	private int docenteGrado;
 
 	public Long getId() {
 		return id;
